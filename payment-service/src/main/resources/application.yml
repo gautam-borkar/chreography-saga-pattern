@@ -1,0 +1,7 @@
+logging:
+  level:
+    org:
+      springframework: DEBUG
+spring.cloud.stream.bidings:
+  output:
+    destination: create_account
