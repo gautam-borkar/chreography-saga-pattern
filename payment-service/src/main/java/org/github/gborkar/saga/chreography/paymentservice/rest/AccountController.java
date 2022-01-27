@@ -1,4 +1,4 @@
-package org.github.gborkar.saga.chreography.paymentservice.rest.controller;
+package org.github.gborkar.saga.chreography.paymentservice.rest;
 
 import java.net.URI;
 import java.util.List;

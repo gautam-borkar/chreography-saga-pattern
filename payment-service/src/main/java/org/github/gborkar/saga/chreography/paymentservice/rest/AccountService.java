@@ -1,4 +1,4 @@
-package org.github.gborkar.saga.chreography.paymentservice.rest.controller;
+package org.github.gborkar.saga.chreography.paymentservice.rest;
 
 import java.util.ArrayList;
 import java.util.Arrays;
