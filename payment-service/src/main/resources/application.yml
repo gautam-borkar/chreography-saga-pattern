@@ -2,6 +2,12 @@ logging:
   level:
     org:
       springframework: DEBUG
-spring.cloud.stream.bidings:
-  output:
-    destination: create_account
+spring:
+  cloud:
+    stream:
+      bindings:
+        output: 
+          destination: create_account
+      kafka:
+        binder:
+          brokers: localhost

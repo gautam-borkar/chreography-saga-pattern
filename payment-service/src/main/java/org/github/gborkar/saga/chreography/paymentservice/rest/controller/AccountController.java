@@ -4,7 +4,6 @@ import java.net.URI;
 import java.util.List;
 
 import org.github.gborkar.saga.chreography.paymentservice.model.Account;
-import org.github.gborkar.saga.chreography.paymentservice.rest.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,14 +23,15 @@ public class AccountController {
     @SuppressWarnings("rawtypes")
     @GetMapping("/account")
     public ResponseEntity<List> getAccount() {
-        return new ResponseEntity<List>(paymentRestService.getAccounts(), HttpStatus.OK);
+        return new ResponseEntity<List>(paymentRestService.getAccounts(),
+                HttpStatus.OK);
     }
 
     @GetMapping("/account/{accountId}")
     public ResponseEntity<Account> getAccountById(
             @PathVariable long accountId) {
-        return new ResponseEntity<Account>(paymentRestService.getAccountById(accountId),
-                HttpStatus.OK);
+        return new ResponseEntity<Account>(
+                paymentRestService.getAccountById(accountId), HttpStatus.OK);
     }
 
     @PostMapping("/account")
