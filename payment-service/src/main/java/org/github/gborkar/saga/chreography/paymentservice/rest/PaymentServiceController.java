@@ -15,10 +15,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 @RestController
-public class AccountController {
+public class PaymentServiceController {
 
     @Autowired
-    AccountService paymentRestService;
+    PaymentService paymentRestService;
 
     @SuppressWarnings("rawtypes")
     @GetMapping("/account")
