@@ -1,0 +1,16 @@
+logging:
+  level:
+    org:
+      springframework: DEBUG
+spring:
+  cloud:
+    stream:
+      bindings:
+        process-in-0: 
+          destination: create_account
+      kafka:
+        streams:
+          binder:
+            brokers:
+            - localhost:9092
+
