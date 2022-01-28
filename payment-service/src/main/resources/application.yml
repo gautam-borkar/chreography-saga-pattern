@@ -9,5 +9,11 @@ spring:
         output: 
           destination: create_account
       kafka:
+        bindings:
+          output:
+            producer:
+              messageKeyExpression: headers['messageKey']
         binder:
           brokers: localhost
+          producer-properties:
+            key.serializer: "org.apache.kafka.common.serialization.StringSerializer"

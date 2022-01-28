@@ -10,11 +10,13 @@ import org.springframework.messaging.MessageChannel;
 @SuppressWarnings("deprecation")
 @EnableBinding(Source.class)
 public class PublishCreateAccount {
+
     @Autowired
     private MessageChannel output;
 
     public void raiseCreateAccount(Account account) {
-        output.send(MessageBuilder.withPayload(account).build());
+        output.send(MessageBuilder.withPayload(account)
+                .setHeader("kafka_receivedMessageKey", account.getAccountId())
+                .build());
     }
-
 }

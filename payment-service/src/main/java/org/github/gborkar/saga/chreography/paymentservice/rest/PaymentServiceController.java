@@ -36,7 +36,7 @@ public class PaymentServiceController {
 
     @PostMapping("/account")
     public ResponseEntity<Void> addAccount(@RequestBody Account account) {
-        long accountId = paymentRestService.addAccount(account);
+        String accountId = paymentRestService.addAccount(account);
 
         URI location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("{id}").buildAndExpand(accountId).toUri();

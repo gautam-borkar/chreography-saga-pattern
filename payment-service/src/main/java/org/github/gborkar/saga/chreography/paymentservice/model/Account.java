@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Account {
 
-	long accountId;
-	
-	long balance;
+    String accountId;
+
+    Long balance;
 }
