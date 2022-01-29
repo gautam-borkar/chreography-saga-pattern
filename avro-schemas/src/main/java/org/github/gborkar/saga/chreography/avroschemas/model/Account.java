@@ -1,4 +1,4 @@
-package org.github.gborkar.saga.chreography.paymentservice.model;
+package org.github.gborkar.saga.chreography.avroschemas.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

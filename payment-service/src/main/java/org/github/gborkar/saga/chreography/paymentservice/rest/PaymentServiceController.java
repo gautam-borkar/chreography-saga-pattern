@@ -3,7 +3,7 @@ package org.github.gborkar.saga.chreography.paymentservice.rest;
 import java.net.URI;
 import java.util.List;
 
-import org.github.gborkar.saga.chreography.paymentservice.model.Account;
+import org.github.gborkar.saga.chreography.avroschemas.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

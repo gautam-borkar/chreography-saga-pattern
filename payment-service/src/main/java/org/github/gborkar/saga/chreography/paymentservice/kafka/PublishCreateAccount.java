@@ -1,6 +1,6 @@
 package org.github.gborkar.saga.chreography.paymentservice.kafka;
 
-import org.github.gborkar.saga.chreography.paymentservice.model.Account;
+import org.github.gborkar.saga.chreography.avroschemas.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;

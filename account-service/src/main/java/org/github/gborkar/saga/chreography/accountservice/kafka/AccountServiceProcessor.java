@@ -3,14 +3,15 @@ package org.github.gborkar.saga.chreography.accountservice.kafka;
 import java.util.function.Consumer;
 
 import org.apache.kafka.streams.kstream.KStream;
+import org.github.gborkar.saga.chreography.avroschemas.model.Account;
 import org.springframework.stereotype.Component;
 
 @Component(value = "process")
 public class AccountServiceProcessor
-        implements Consumer<KStream<String, String>> {
+        implements Consumer<KStream<String, Account>> {
 
     @Override
-    public void accept(KStream<String, String> input) {
+    public void accept(KStream<String, Account> input) {
         input.foreach((key, value) -> {
             System.out.println("Key: " + key + " Value: " + value);
         });

@@ -3,8 +3,8 @@ package org.github.gborkar.saga.chreography.paymentservice.rest;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.github.gborkar.saga.chreography.avroschemas.model.Account;
 import org.github.gborkar.saga.chreography.paymentservice.kafka.PublishCreateAccount;
-import org.github.gborkar.saga.chreography.paymentservice.model.Account;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;

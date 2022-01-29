@@ -13,9 +13,11 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>account-service</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.0</spring-cloud.version>
+        <avro-schema.version>0.0.1-SNAPSHOT</avro-schema.version>
     </properties>
 
     <dependencies>
@@ -68,6 +70,12 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.github.gborkar.saga.chreography</groupId>
+            <artifactId>avro-schemas</artifactId>
+            <version>${avro-schema.version}</version>
         </dependency>
     </dependencies>
 
