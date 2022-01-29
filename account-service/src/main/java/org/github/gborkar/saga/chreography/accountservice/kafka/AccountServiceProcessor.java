@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 
 @Component(value = "process")
 public class AccountServiceProcessor
-        implements Consumer<KStream<Object, String>> {
+        implements Consumer<KStream<String, String>> {
 
     @Override
-    public void accept(KStream<Object, String> input) {
+    public void accept(KStream<String, String> input) {
         input.foreach((key, value) -> {
             System.out.println("Key: " + key + " Value: " + value);
         });
