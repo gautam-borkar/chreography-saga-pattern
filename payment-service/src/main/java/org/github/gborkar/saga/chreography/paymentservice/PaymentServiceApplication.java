@@ -33,7 +33,7 @@ public class PaymentServiceApplication {
 
     @Bean
     public SchemaRegistryClient confluentSchemaRegistryClient(
-            @Value("${spring.cloud.schemaRegistryClient.endpoint}") String endpoint) {
+            @Value("${spring.cloud.stream.kafka.binder.producer-properties.schema.registry.url}") String endpoint) {
         ConfluentSchemaRegistryClient client = new ConfluentSchemaRegistryClient();
         client.setEndpoint(endpoint);
         return client;
