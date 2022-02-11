@@ -1,0 +1,21 @@
+{
+  "type": "record",
+  "name": "AuditLog",
+  "namespace": "org.github.gborkar.saga.chreography.avroschemas.model",
+  "doc": "This is a sample Avro schema for Audit Log",
+  "version": "1",
+  "fields": [
+    {
+      "name": "accountId",
+      "type": "string"
+    },
+    {
+      "name": "comment",
+      "type": "string"
+    },
+    {
+      "name": "date",
+      "type": "string"
+    }
+  ]
+}

@@ -7,10 +7,17 @@ spring:
     stream:
       bindings:
         process-in-0: 
-          destination: create_account
+          destination: create-account
+        process-out-0:
+          destination: audit-log
       kafka:
         streams:
           binder:
             brokers:
             - localhost:9092
-
+            producer-properties:
+              value.serializer: "org.apache.kafka.common.serialization.StringSerializer"
+  kafka:
+    producer:
+      value-serializer: "org.apache.kafka.common.serialization.StringSerializer"
+        

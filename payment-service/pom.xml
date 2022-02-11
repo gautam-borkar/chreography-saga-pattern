@@ -14,9 +14,12 @@
     <description>Demo project for Spring Boot</description>
 
     <properties>
+        <confluent.maven.repo>https://packages.confluent.io/maven/</confluent.maven.repo>
         <java.version>17</java.version>
         <spring-cloud.version>2021.0.0</spring-cloud.version>
         <avro-schema.version>0.0.1-SNAPSHOT</avro-schema.version>
+        <confluent.version>7.0.1</confluent.version>
+        <schema.registry.client.version>1.1.5</schema.registry.client.version>
     </properties>
 
     <dependencies>
@@ -88,11 +91,24 @@
             <artifactId>spring-boot-devtools</artifactId>
             <scope>runtime</scope>
         </dependency>
-        
+
         <dependency>
             <groupId>org.github.gborkar.saga.chreography</groupId>
             <artifactId>avro-schemas</artifactId>
             <version>${avro-schema.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.confluent</groupId>
+            <artifactId>kafka-avro-serializer</artifactId>
+            <version>${confluent.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-schema-registry-client</artifactId>
+            <version>${schema.registry.client.version}</version>
         </dependency>
     </dependencies>
 
@@ -140,6 +156,11 @@
             <releases>
                 <enabled>false</enabled>
             </releases>
+        </repository>
+        <repository>
+            <id>confluent</id>
+            <name>Confluent</name>
+            <url>${confluent.maven.repo}</url>
         </repository>
     </repositories>
     <pluginRepositories>

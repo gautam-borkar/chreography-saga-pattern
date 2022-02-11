@@ -5,9 +5,13 @@ logging:
 spring:
   cloud:
     stream:
+      default:
+        producer:
+          useNativeEncoding: true
       bindings:
         output: 
-          destination: create_account
+          destination: create-account
+          contentType: application/*+avro
       kafka:
         bindings:
           output:
@@ -17,3 +21,7 @@ spring:
           brokers: localhost
           producer-properties:
             key.serializer: "org.apache.kafka.common.serialization.StringSerializer"
+            value.serializer: "io.confluent.kafka.serializers.KafkaAvroSerializer"
+            schema.registry.url: http://localhost:8081 
+    schemaRegistryClient:
+      endpoint: http://localhost:8081

@@ -15,7 +15,10 @@ public class PublishCreateAccount {
     private MessageChannel output;
 
     public void raiseCreateAccount(Account account) {
-        output.send(MessageBuilder.withPayload(account)
+        Account accountTest = Account.newBuilder()
+                .setAccountId(account.getAccountId())
+                .setBalance(account.getBalance()).build();
+        output.send(MessageBuilder.withPayload(accountTest)
                 .setHeader("messageKey", account.getAccountId()).build());
     }
 }
